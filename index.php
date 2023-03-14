@@ -22,7 +22,12 @@ include( 'admin/includes/functions.php' );
 <body>
 
   <h1>Welcome to My Website!</h1>
-  <p>This is the website frontend!</p>
+  <p>This is my personal portfolio Website!</p>
+  <div>It is still in developing, for the project details, please refer to my
+    <a href="https://github.com/alanmin2015">Github</a>
+    or 
+    <a href="https://www.linkedin.com/in/wenbo-min-398255171/">Linkedin</a>
+  </div>
 
   <?php
 
@@ -33,7 +38,7 @@ include( 'admin/includes/functions.php' );
 
   ?>
 
-  <p>There are <?php echo mysqli_num_rows($result); ?> projects in the database!</p>
+  <!-- <p>There are <?php echo mysqli_num_rows($result); ?> projects in the database!</p> -->
 
   <hr>
 
@@ -46,17 +51,18 @@ include( 'admin/includes/functions.php' );
 
       <?php if($record['photo']): ?>
 
-        <p>The image can be inserted using a base64 image:</p>
-
+        <!-- <p>The image can be inserted using a base64 image:</p> -->
+        <br>
+        <br>
         <img src="<?php echo $record['photo']; ?>">
 
-        <p>Or by streaming the image through the image.php file:</p>
+        <!-- <p>Or by streaming the image through the image.php file:</p>
 
-        <img src="admin/image.php?type=project&id=<?php echo $record['id']; ?>&width=100&height=100">
+        <img src="admin/image.php?type=project&id=<?php echo $record['id']; ?>&width=100&height=100"> -->
 
       <?php else: ?>
 
-        <p>This record does not have an image!</p>
+        <p>This record does not have an image.</p>
 
       <?php endif; ?>
 
